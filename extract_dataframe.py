@@ -1,8 +1,9 @@
+#importing libraries
 import json
 import pandas as pd
 from textblob import TextBlob
 
-
+#creating a read json class
 def read_json(json_file: str) -> list:
     """
     json file reader to open and read json files into a list
@@ -13,7 +14,7 @@ def read_json(json_file: str) -> list:
     -------
     length of the json file and a list of json
     """
-
+#creating an araa that can able to append tweets 
     tweets_data = []
     for tweets in open(json_file, 'r'):
         tweets_data.append(json.loads(tweets))

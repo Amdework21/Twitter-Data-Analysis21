@@ -1,6 +1,8 @@
+#Importing Libraries
 import pandas as pd
 import re
 
+#The main class for clearing Tweeter data sets 
 class Clean_Tweets:
     """
     The PEP8 Standard AMAZING!!!
