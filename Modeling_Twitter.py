@@ -1,3 +1,4 @@
+#Usefull imports
 from nltk.corpus import stopwords
 import spacy
 from gensim.models import CoherenceModel
@@ -13,17 +14,18 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 import joblib
 
+#Declaring model names to identify the good model
 best_model = ""
 best_model_name = ""
 best_score = 0
 
-
+# The data here is not committed yet, because of there is a data more than 55MBs, We'll upload it soon, this is just to show how the can we build a model using Tweeter data sets
 def run():
     model_tweets = pd.read_csv('./data/model_ready_data.csv')
     model_tweets = model_tweets.fillna("")
     model_tweets.head()
 
-    # 4492 1925
+    # 4492 1925, Thsi are all used descriptive names (Good naming), no need of other comments.
     sentiment_analysis_tweet_data = model_tweets.copy(deep=True)
     sentiment_analysis_tweet_data.drop(
         sentiment_analysis_tweet_data[sentiment_analysis_tweet_data['sentiment'] == -1].index, inplace=True)
