@@ -124,7 +124,7 @@ def run():
 
         return best_model.score(X_test, y_test)
 
-    sgd = joblib.dump(best_model, './trained_models/newsentimentSGDmodel.jl')
+    sgd = joblib.dump(best_model, './trained_models/newsentimentSGDmodel.jl') #trained from the local machine
 
     stop_words = stopwords.words('english')
     stop_words.extend(['from', 'subject', 're', 'edu', 'use'])

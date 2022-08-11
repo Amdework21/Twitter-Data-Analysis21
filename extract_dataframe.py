@@ -234,3 +234,4 @@ if __name__ == "__main__":
     tweet_df = tweet.get_tweet_df(save=True)
 
     # use all defined functions to generate a dataframe with the specified columns above
+# function and variable names are all good names, nor further comments required
