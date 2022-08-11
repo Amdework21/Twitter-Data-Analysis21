@@ -39,7 +39,7 @@ class TweetDfExtractor:
         statuses_count = [x["user"]["statuses_count"]
                           for x in self.tweets_list]
 
-        return statuses_count
+        return statuses_count # Returnes array of users and status_count 
 
     def find_full_text(self) -> list:
         full_text = []
