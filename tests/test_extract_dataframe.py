@@ -1,17 +1,15 @@
-#Import important libraries
 import os
 import sys
 import inspect
 import pandas as pd
 import unittest
 
-#Locate the sys path with read_json
 sys.path.append(os.path.abspath(os.path.join('..')))
 
 from extract_dataframe import TweetDfExtractor
 from extract_dataframe import read_json
 
-#Readind the file
+
 _, tweet_list = read_json("./data/covid19.json")
 
 columns = ['created_at', 'source', 'original_text', 'clean_text', 'sentiment', 'polarity', 'subjectivity', 'lang', 'favorite_count', 'retweet_count',
@@ -21,6 +19,7 @@ columns = ['created_at', 'source', 'original_text', 'clean_text', 'sentiment', '
 class TestTweetDfExtractor(unittest.TestCase):
     """
                 A class for unit-testing function in the fix_clean_tweets_dataframe.py file
+
                 Args:
         -----
                         unittest.TestCase this allows the new class to inherit
