@@ -53,7 +53,7 @@ class TweetDfExtractor:
         return full_text #Return a text
 
     def find_original_text(self) -> list:
-        original_text = [x['text'] for x in self.tweets_list]
+        original_text = [x['text'] for x in self.tweets_list] #lit pf txts
 
         return original_text
 
