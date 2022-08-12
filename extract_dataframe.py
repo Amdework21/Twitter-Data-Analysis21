@@ -50,7 +50,7 @@ class TweetDfExtractor:
             except KeyError:
                 full_text.append("")
 
-        return full_text
+        return full_text #Return a text
 
     def find_original_text(self) -> list:
         original_text = [x['text'] for x in self.tweets_list]
